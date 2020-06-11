@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get "/profile", to: 'pages#profile'
   resources :gardens, only: [:index, :new, :create, :show, :update, :edit]
-  resources :plants, only: [:index, :show, :new, :create]
+  resources :plants, only: [:index, :show, :new, :create, :destroy]
 end
