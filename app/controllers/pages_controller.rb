@@ -3,5 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @user
+    @plants
+    @gardens
   end
 end

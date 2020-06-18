@@ -4,5 +4,12 @@
     <div class="">
       <%= link_to "CREATE YOUR GARDEN", new_garden_path %>
     </div>
+    <div class="">
+       <% @plants.each do |plant| %>
+       <div class="card">
+         <%= @plant.science_name %>
+       </div>
+       <% end %>
+    </div>
   </div>
 </div>
