@@ -1,5 +1,7 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+require 'open-uri'
+require 'nokogiri'
 
 # https://www.aujardin.info/plantes/lierre_du_diable.php
 
@@ -37,3 +39,8 @@ plant_2 = Plant.new(science_name: 'Rosier', origin: 'Asie', genre: "arbuste à f
 # file = URI.open('https://fac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Ffac.2F2018.2F07.2F30.2F8c5b9e9e-20ae-4b77-aced-23318ca9289a.2Ejpeg/750x562/quality/80/crop-from/center/cr/wqkgTWFpemVuYSAvIEZlbW1lIEFjdHVlbGxl/tacos-de-poulet-marine-sauce-coriandre-et-tequila.jpeg')
 # plant_1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 # plant_1.save!
+
+# Scrapping plants
+
+# html_content = open('https://www.aujardin.info/search?q=roses').read
+# doc = Nokogiri::HTML(html_content)
