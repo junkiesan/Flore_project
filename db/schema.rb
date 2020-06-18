@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_10_103622) do
+ActiveRecord::Schema.define(version: 2020_06_18_132154) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_06_10_103622) do
     t.string "nickname"
     t.string "science_name"
     t.string "origin"
-    t.string "type"
+    t.string "genre"
     t.text "advice"
     t.text "story"
     t.bigint "garden_id", null: false
