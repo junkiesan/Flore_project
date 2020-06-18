@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @user
-    @plants
+    @plants = Plant.all
     @gardens
   end
 end
