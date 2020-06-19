@@ -5,7 +5,7 @@ class GardensController < ApplicationController
 
   def show
     @garden = Garden.find(params[:id])
-    @plants = Plant.new
+    @plant = Plant.new
   end
 
   def new
@@ -13,7 +13,7 @@ class GardensController < ApplicationController
   end
 
   def create
-    @garden = Garden.new(garden_params)
+    @garden = Garden.create(garden_params)
     @garden.user = current_user
     if @garden.save
       redirect_to garden_path(@garden)
