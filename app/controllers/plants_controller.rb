@@ -17,9 +17,11 @@ class PlantsController < ApplicationController
 
   def create
     @plant = Plant.new(plant_params)
-    @garden = Garden.find(params[:garden_id])
+   # @garden = Garden.find(params[:garden_id])
+    # @garden.user = current_user
     @plant.garden = @garden
     @plant.user = current_user
+    @user
     if @plant.save!
       redirect_to garden_path
       flash[:success] = 'Belle plante ! Que le temps la rende belle et vigoureuse 🌵'
