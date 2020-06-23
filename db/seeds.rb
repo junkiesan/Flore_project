@@ -30,12 +30,12 @@ garden_1.save!
 # Plants
 puts "Creating sweeeeet Plants"
 
-plant_1 = Plant.create(science_name: 'Pothos', origin: 'Iles Salomon', genre: "plante", advice: 'Facile de culture, il pousse rapidement, sans demander trop de soins et son bouturage est un jeu d enfant. Que demander de plus ?', garden: garden_1, story: "Le Pothos (Epipremnum aureum) a pour surnom « lierre d'intérieur » bien qu'il n'ait pourtant rien à voir avec un lierre. Originaire des îles Salomon, cette plante grimpante vigoureuse fait partie de la famille des Aracées.")
+plant_1 = Plant.create(science_name: 'Pothos', nickname: 'Fouss', origin: 'Iles Salomon', genre: "plante", advice: 'Facile de culture, il pousse rapidement, sans demander trop de soins et son bouturage est un jeu d enfant. Que demander de plus ?', garden: garden_1, story: "Le Pothos (Epipremnum aureum) a pour surnom « lierre d'intérieur » bien qu'il n'ait pourtant rien à voir avec un lierre. Originaire des îles Salomon, cette plante grimpante vigoureuse fait partie de la famille des Aracées.")
 file = URI.open('https://static.aujardin.info/cache/th/img10/scindapsus-aureus-feuille-600x450.webp')
 plant_1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 plant_1.save!
 
-plant_2 = Plant.create(science_name: 'Rosier', origin: 'Asie', genre: "arbuste à fleurs", advice: 'Rustique mais protégez le point de greffe par un buttage de 20 cm', garden: garden_1, story: "C'est au moyen-âge que les premières roses ont été cultivées, elles furent importées par les croisés en provenance de l'orient. C'est ensuite au XVIIIème siècle que les français commençèrent à les croiser pour créer de nouvelles variétés.")
+plant_2 = Plant.create(science_name: 'Rosier', nickname: 'Bae', origin: 'Asie', genre: "arbuste à fleurs", advice: 'Rustique mais protégez le point de greffe par un buttage de 20 cm', garden: garden_1, story: "C'est au moyen-âge que les premières roses ont été cultivées, elles furent importées par les croisés en provenance de l'orient. C'est ensuite au XVIIIème siècle que les français commençèrent à les croiser pour créer de nouvelles variétés.")
 file = URI.open('https://static.aujardin.info/cache/th/img9/rosa-fleur-600x450.webp')
 plant_2.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 plant_2.save!
