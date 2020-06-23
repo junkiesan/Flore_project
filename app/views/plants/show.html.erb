@@ -1,5 +1,7 @@
 <h1><%= @plant.science_name %></h1>
 
+<%= cl_image_tag @plant.photo.key%>
+
 <h2>La vie de <%= @plant.nickname %></h2>
 <p><strong>Origine :</strong> <%= @plant.origin %></p>
 <p><strong>Type :</strong> <%= @plant.genre %></p>
