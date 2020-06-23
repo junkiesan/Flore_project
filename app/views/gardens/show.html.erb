@@ -9,7 +9,7 @@
 
   <div class="d-flex align-center">
     <h3 class="text-center">Ajoute une plante 🌿</h3>
-      <%= simple_form_for [@plant @garden] do |f| %>
+      <%= simple_form_for @plant do |f| %>
       <%= f.input :nickname, placeholder: "Belle plante" %>
       <%= f.input :photo, as: :file %>
       <div class="form-actions">

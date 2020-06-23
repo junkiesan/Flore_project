@@ -5,5 +5,6 @@ class PagesController < ApplicationController
     @user
     @plants = Plant.all
     @gardens
+    @photo
   end
 end

@@ -8,6 +8,9 @@
        <% @plants.each do |plant| %>
        <div class="card">
           <h3 class="pt-5"><%= link_to plant.science_name, plant_path(plant) %> </h3>
+          <% if plant.photo.attached? %>
+          <%=  cl_image_tag plant.photo.key%>
+          <% end %>
        </div>
        <% end %>
     </div>
