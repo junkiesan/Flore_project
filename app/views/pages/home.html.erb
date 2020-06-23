@@ -7,7 +7,7 @@
     <div class="">
        <% @plants.each do |plant| %>
        <div class="card">
-          <h3 class="pt-5"><%= plant.science_name %> </h3>
+          <h3 class="pt-5"><%= link_to plant.science_name, plant_path(plant) %> </h3>
        </div>
        <% end %>
     </div>
