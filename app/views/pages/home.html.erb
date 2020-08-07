@@ -4,8 +4,28 @@
       <%= link_to "Create your Garden", new_garden_path %>
     </div>
 </div>
+<div class="container">
+  <h2 class="text-center">Comment ça marche ?</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="images/green.svg" alt="">
+      <h4>Créer ton jardin</h4>
+      <p>Do it. Do it. Do it.</p>
+    </div>
+    <div class="card">
+      <img src="images/cactus.svg" alt="">
+      <h4>Ajoute tes plantes</h4>
+      <p>Code. Code. Code.</p>
+    </div>
+    <div class="card">
+      <img src="images/mario.svg" alt="">
+      <h4>Sauve tes plantes de la soif</h4>
+      <p>Build. Build. Build.</p>
+    </div>
+  </div>
+</div>
 <div class="cards">
-  <% @plants.each do |plant| %>
+  <% @plants.take(6).each do |plant| %>
   <div class="card">
     <h3 class="pt-5"><%= link_to plant.science_name, plant_path(plant) %> </h3>
     <% if plant.photo.attached? %>
