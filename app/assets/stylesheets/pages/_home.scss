@@ -30,3 +30,27 @@ h1 {
   vertical-align: middle;
   height: 100vh;
 }
+
+.bloc img {
+  height: 100px;
+}
+
+.bloc p {
+  opacity: .5;
+}
+
+.bloc {
+  width: 350px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgb(230,230,230);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
