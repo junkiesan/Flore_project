@@ -27,13 +27,14 @@
 </div>
 <div class="cards">
   <h2>Découvrez de nouvelles plantes</h2>
-  <% @plants.take(6).each do |plant| %>
+  <% @plants.each do |plant| %>
   <div class="card" style="">
-    <h3><%= link_to plant.science_name, plant_path(plant) %> </h3>
+    <%= link_to plant_path(plant) do %>
+    <h3><%= plant.science_name %></h3>
     <% if plant.photo.attached? %>
-    <%#=  cl_image_tag plant.photo.key %>
-    <div style="background-image: url('<%= plant.photo.key %>');"></div>
+    <%=  cl_image_tag plant.photo.key %>
     <% end %>
   </div>
+  <% end %>
   <% end %>
 </div>
