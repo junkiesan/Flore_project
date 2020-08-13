@@ -40,6 +40,10 @@ class PlantsController < ApplicationController
     redirect_to garden_path(@plant.garden)
   end
 
+  def is_gonna_die
+    @plant = Plant.find(params[:id])
+    @plant.water? flash[:alert] = "N'oubliez pas d'arroser votre plante aujourd'hui 💦"
+  end
 private
 
   def plant_params
