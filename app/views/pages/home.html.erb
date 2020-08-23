@@ -25,10 +25,10 @@
     </div>
   </div>
 </div>
+<h2>Découvrez de nouvelles plantes</h2>
 <div class="cards">
-  <h2>Découvrez de nouvelles plantes</h2>
   <% @plants.each do |plant| %>
-  <div class="card" style="">
+  <div class="card">
     <%= link_to plant_path(plant) do %>
     <h3><%= plant.science_name %></h3>
     <% if plant.photo.attached? %>
