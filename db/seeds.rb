@@ -1,8 +1,9 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-# require 'open-uri'
-# require 'nokogiri'
-
+require 'open-uri'
+require 'nokogiri'
+require 'pry'
+require 'faker'
 # https://www.aujardin.info/plantes/lierre_du_diable.php
 
 # Cleaning
@@ -42,5 +43,24 @@ plant_2.save!
 
 # Scrapping plants
 
+plant = 'ageratum-houstonianum'
+url = "https://www.aujardin.info/plantes/#{plant}.php"
+
+html_file = open(url).read
+html_doc = Nokogiri::HTML(html_file)
+
+html_doc.search('#description3').each do |element|
+ green = Plant.new {
+    science_name = element.css("bgDark span").text,
+    garden = Garden.last,
+    nickname = Faker::Movies::StarWars.character
+    }
+    # origin = ,
+    # genre = ,
+    # advice = ,
+    # story =
+  green.save!
+end
 # html_content = open('https://www.aujardin.info/search?q=roses').read
 # doc = Nokogiri::HTML(html_content)
+# url = "https://www.aujardin.info/plantes/#{plant}.php"
