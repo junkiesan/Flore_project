@@ -35,6 +35,17 @@ h2 {
   vertical-align: middle;
   height: 100vh;
 }
+.banner a {
+  margin-left: 214px;
+  border: 1px solid white;
+  border-radius: 15px;
+    &:hover {
+    color: $sandy-brown;
+    text-decoration: none;
+    border: solid $sandy-brown;
+    border-radius: 15px;
+  }
+}
 
 .bloc img {
   height: 100px;
