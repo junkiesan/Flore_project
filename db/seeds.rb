@@ -61,6 +61,11 @@ html_doc.search('#description3').each do |element|
     # story =
   green.save!
 end
+
+# Seeding an article
+file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
+article = Article.new(title: 'NES', body: "A great console")
+article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 # html_content = open('https://www.aujardin.info/search?q=roses').read
 # doc = Nokogiri::HTML(html_content)
 # url = "https://www.aujardin.info/plantes/#{plant}.php"
