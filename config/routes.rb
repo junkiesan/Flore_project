@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :plants, only: [:index, :show, :create,:new, :destroy]
+
+  get "/blog", to: 'articles#index'
+  resources :articles, except: :index
 end
