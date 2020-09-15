@@ -1,18 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Titre:</strong>
-  <%= @article.title %>
-</p>
+<div class="container">
+  <p>
+    <strong>Titre:</strong>
+    <%= @article.title %>
+  </p>
 
-<p>
-  <strong>Contenu:</strong>
-  <%= @article.rich_body %>
-</p>
+  <p>
+    <strong>Contenu:</strong>
+    <%= @article.rich_body %>
+  </p>
 
-<% @article.photos.each do |photo| %>
-  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-<% end %>
+  <% @article.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
 
-<%= link_to 'Modifier', edit_article_path(@article) %> |
-<%= link_to 'Retour', root_path %>
+  <%= link_to 'Modifier', edit_article_path(@article) %> |
+  <%= link_to 'Retour', root_path %>
+</div>

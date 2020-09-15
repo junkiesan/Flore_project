@@ -4,13 +4,13 @@
 <h1>Articles</h1>
 
 <table>
-  <thead>
+<!--   <thead>
     <tr>
       <th>Titre</th>
       <th>Contenu</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+  </thead> -->
 
   <tbody class="article">
     <% @articles.each do |article| %>
@@ -27,6 +27,6 @@
 
 <br>
 </div>
-<div class="d-flex">
+<div class="btn">
 <%= link_to 'Nouvel Article', new_article_path %>
 </div>
