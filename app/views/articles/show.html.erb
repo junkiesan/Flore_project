@@ -11,9 +11,9 @@
     <%= @article.rich_body %>
   </p>
 
-  <% @article.photos.each do |photo| %>
-    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-  <% end %>
+  <%# @article.photos.each do |photo| %>
+    <%= image_tag(@article.photo) if @article.photo.attached?%>
+  <%# end %>
 
   <%= link_to 'Modifier', edit_article_path(@article) %> |
   <%= link_to 'Retour', root_path %>
