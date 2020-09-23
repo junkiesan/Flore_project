@@ -71,3 +71,17 @@ hr {
   padding-right: 10px;
   height: 120px;
 }
+
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $sandy-brown;
+  transition: background 0.3s ease;
+  margin-left: 15px;
+}
+
+.btn-flat:hover {
+  background: $dark-sandy;
+  color: white;
+}
